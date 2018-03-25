@@ -8,7 +8,4 @@ RUN echo 'deb http://ftp.debian.org/debian stretch-backports main' \
     && rm -rf /var/cache/apt/* \
     && rm -f /etc/apt/sources.list.d/stretch-backports.list
 
-RUN mkdir -p /var/log/letsencrypt/ \
-    && ln -s /dev/stdout /var/log/letsencrypt/letsencrypt.log
-
 ENTRYPOINT ["certbot"]
