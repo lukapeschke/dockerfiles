@@ -1,5 +1,5 @@
-#!/bin/sh -x
+#!/bin/sh -xe
 
-/usr/bin/deluged
+chown -R deluge:deluge /home/deluge
 
-/usr/bin/deluge-web
+exec gosu deluge /start_deluge.sh
