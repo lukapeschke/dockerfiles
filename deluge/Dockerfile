@@ -31,7 +31,7 @@ RUN set -ex; \
 	apt-get purge -y --auto-remove $fetchDeps
 
 
-COPY *.sh /
+COPY start_deluge.sh start.sh /
 
 WORKDIR /home/deluge
 CMD  /start.sh
