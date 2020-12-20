@@ -1,3 +1,3 @@
 #!/bin/sh -xe
 
-/usr/bin/deluged && /usr/bin/deluge-web
+/usr/bin/deluged && /usr/bin/deluge-web -d
