@@ -1,4 +1,4 @@
-FROM debian:11-slim
+FROM debian:testing-slim
 
 RUN  apt-get update \
      && apt-get install -y --no-install-recommends \
@@ -10,7 +10,7 @@ RUN  apt-get update \
 RUN  mkdir -p /home/deluge/.config/deluge \
      && chown -R deluge:deluge /home/deluge/.config/deluge
 
-ENV GOSU_VERSION 1.10
+ENV GOSU_VERSION 1.17
 
 RUN set -ex; \
 	\
