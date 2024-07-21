@@ -10,7 +10,7 @@ RUN  apt-get update \
 RUN  mkdir -p /home/deluge/.config/deluge \
      && chown -R deluge:deluge /home/deluge/.config/deluge
 
-ENV GOSU_VERSION 1.17
+ENV GOSU_VERSION=1.17
 
 RUN set -ex; \
 	\
@@ -34,4 +34,4 @@ RUN set -ex; \
 COPY start_deluge.sh start.sh /
 
 WORKDIR /home/deluge
-CMD  /start.sh
+CMD  ["/start.sh"]
