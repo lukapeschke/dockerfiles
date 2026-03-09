@@ -2,6 +2,7 @@ FROM debian:trixie
 
 RUN  apt-get update \
      && apt-get install -y --no-install-recommends \
+        ca-certificates \
         deluged \
         deluge-web \
         gosu \
